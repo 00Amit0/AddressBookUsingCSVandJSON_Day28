@@ -79,6 +79,8 @@ namespace AddressBookUsingCSVandJSON
             listPersonInCity.ForEach(x => Console.WriteLine("{0}\t", x.Name.ToString()));
 
         }
+
+        //UC5 and 6 are done already as the multiple contacts are added in the addressbook
     }
 }
   
