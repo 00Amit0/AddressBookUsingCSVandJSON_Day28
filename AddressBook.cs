@@ -96,6 +96,22 @@ namespace AddressBookUsingCSVandJSON
                 Console.WriteLine("no duplicate entry for this name");
             }
         }
+
+        //uc8 ,uc9 ,uc 10 to search multiple persons in same city or state
+        public static void SameCityStateMates(List<Person> listPersonInCity)
+        {
+            Console.WriteLine("enter city to search  person in it");
+            string Address = Console.ReadLine();
+            int count = listPersonInCity.Count(x => x.Address == Address);
+            Console.WriteLine("{0} person living in {1}", count, Address);
+
+            foreach (Person person in listPersonInCity.FindAll(e => e.Address == Address))
+            {
+                Console.WriteLine("Name :" + person.Name);
+            }
+
+        }
+
     }
 }
   
